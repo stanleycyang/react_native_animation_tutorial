@@ -43,9 +43,6 @@ const CustomSceneConfig = Object.assign({}, BaseConfig, {
   }
 })
 
-
-
-
 class ReactNativeTutorial extends Component {
 
   // A simple switch statement to allow our router to work
