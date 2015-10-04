@@ -16,7 +16,7 @@ const {
   height
 } = Dimensions.get('window')
 
-const CIRCLE_DIMENSIONS = 100
+const CIRCLE_DIMENSIONS = 40
 const SPRING_CONFIG = {
   tension: 2,
   friction: 3 // Soft spring
@@ -32,14 +32,24 @@ class Playground extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      previewOpen: false,
       w: new Animated.Value(CIRCLE_DIMENSIONS),
       h: new Animated.Value(CIRCLE_DIMENSIONS),
       br: new Animated.Value(CIRCLE_DIMENSIONS/2)
     }
 
+    this._triggerAnimation = this._triggerAnimation.bind(this)
+
   }
 
   _triggerAnimation (w1, h1, br1, w2, h2, br2) {
+    // Set preview state
+    this.setState({
+      previewOpen: !this.state.previewOpen
+    })
+
+    console.log(this.state.previewOpen)
+
     Animated.sequence([
       Animated.parallel([
         Animated.timing(this.state.w, {
@@ -92,13 +102,20 @@ class Playground extends Component {
   }
 
   render () {
+    let CloseButton
+
+    if (this.state.previewOpen) {
+       CloseButton =
+          <TouchableOpacity onPress={this._closePreview.bind(this)} style={styles.closeButton}>
+            <Text>Close me</Text>
+          </TouchableOpacity>
+    }
+
     return (
       <View style={styles.container}>
         <Animated.View
           style={this.getStyle()} />
-        <TouchableOpacity onPress={this._closePreview.bind(this)} style={styles.closeButton}>
-          <Text>Close me</Text>
-        </TouchableOpacity>
+          { CloseButton }
       </View>
     )
   }
