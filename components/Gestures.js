@@ -10,7 +10,7 @@ const {
 }  = React
 
 const ACTION_TIMER = 400
-const COLORS = ['rgb(255,255,255)', 'rgb(111,235,62)']
+const COLORS = ['rgb(0,0,255)', 'rgb(111,235,62)']
 
 class Gestures extends Component {
   constructor (props) {
@@ -41,7 +41,7 @@ class Gestures extends Component {
   animationActionComplete () {
     let message = ''
     if (this.state.pressAction.__getAnimatedValue() === 1) {
-      message = 'You held it long enough to fire the action!'
+      message = "Thank you for holding :-)"
     } else {
       message = 'Press and hold the button!'
     }
@@ -85,7 +85,7 @@ class Gestures extends Component {
           >
           <View style={styles.button} onLayout={this.getButtonWidthLayout.bind(this)}>
             <Animated.View style={[styles.bgFill, this.getProgressStyles()]} />
-            <Text style={styles.text}>Press and Hold me</Text>
+            <Text style={styles.text}>Press me!</Text>
           </View>
         </TouchableWithoutFeedback>
         <View>
