@@ -30,7 +30,7 @@ class PageTwo extends Component {
         <Text style={styles.welcome}>Page two</Text>
         <TouchableHighlight onPress={this._handlePress.bind(this)}>
           <View style={{paddingVertical: 10, paddingHorizontal: 20, backgroundColor: 'black'}}>
-            <Text style={styles.welcome}>Go to page three</Text>
+            <Text style={styles.welcome}>Go to last page</Text>
           </View>
         </TouchableHighlight>
         <TouchableHighlight onPress={this._goBack.bind(this)} style={styles.backButton}>

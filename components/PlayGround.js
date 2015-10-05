@@ -48,8 +48,6 @@ class Playground extends Component {
       previewOpen: !this.state.previewOpen
     })
 
-    console.log(this.state.previewOpen)
-
     Animated.sequence([
       Animated.parallel([
         Animated.timing(this.state.w, {
