@@ -126,9 +126,11 @@ const styles = {
     flex: 1
   },
   circle: {
-    backgroundColor: 'blue'
+    backgroundColor: 'darkgreen'
   },
   closeButton: {
+    paddingVertical: 10,
+    paddingHorizontal: 65,
     backgroundColor: 'red',
     position: 'absolute',
     top: 20,
