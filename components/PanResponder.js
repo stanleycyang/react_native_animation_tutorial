@@ -56,8 +56,9 @@ class PanResponderAPI extends Component {
       onPanResponderRelease: (evt, gestureState) => {
         // The user has released all touches while this view is the
         // responder. This typically means a gesture has succeeded
-        this.state.pan.flattenOffset()
-        console.log('Released')
+        Animated.spring(this.state.pan, {
+          toValue: 0
+        }).start()
       }
     })
   }
@@ -66,7 +67,14 @@ class PanResponderAPI extends Component {
     return [
       styles.square,
       {
-        transform: this.state.pan.getTranslateTransform() // We're going to take the X and Y and move the square around
+        transform: [
+          {
+            translateX: this.state.pan.x
+          },
+          {
+            translateY: this.state.pan.y
+          }
+        ]
       }
     ]
   }
