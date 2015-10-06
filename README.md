@@ -1,4 +1,4 @@
-#React Native Navigator + Animation tutorial
+#React Native Navigator + Animation Tutorial
 
 
 ## Purpose
