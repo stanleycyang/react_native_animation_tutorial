@@ -18,6 +18,10 @@ $ npm install
 
 1. Open `ios/ReactNativeTutorial.xcodeproj`.
 2. Run the application in your XCode
+ 
+## Contributing
+
+Feel free to fork or clone as necessary. All PRs will be reviewed and merged as necessary.
 
 ## License
 [MIT](LICENSE)
