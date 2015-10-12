@@ -21,7 +21,7 @@ $ npm install
  
 ## Contributing
 
-Feel free to fork or clone as necessary. All PRs will be reviewed and merged as necessary.
+Feel free to fork or clone as necessary. All PRs will be reviewed.
 
 ## License
 [MIT](LICENSE)
