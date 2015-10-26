@@ -3,7 +3,7 @@
 
 ## Purpose
 
-> This application was made with the goal of jumpstarting developers in React Native, which is an awesome technology.
+> This application was made with the goal of jumpstarting developers in React Native and helping people to understand the difficult concepts associated with iOS development
 
 ## Installation
 
